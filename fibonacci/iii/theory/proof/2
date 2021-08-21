@@ -1,0 +1,29 @@
+•   s.n = Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) + f.(n-1)
+
+⊩   s.n
+
+=   Theory [1]
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) )
+
+=   Split-off term
+
+    Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) +
+    f.(n-1) * f.(n-(n-1))
+
+=   Arithmetic
+
+    Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) +
+    f.(n-1) * f.1
+
+=   Definition of f
+
+    Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) +
+    f.(n-1) * 1
+
+=   Unit of *
+
+    Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) +
+    f.(n-1)
+
+■

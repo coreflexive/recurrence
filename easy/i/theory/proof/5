@@ -1,0 +1,43 @@
+•   { inv.n.z.y ∧ n ≠ N } z,y:= E,F { inv.(n+1).z.y }
+
+(1) E = ? // E = (3 * z) + (3 * y * 2)
+
+(2) F = ? // F = 3 * y
+
+≡   Hoare triple
+
+    inv.n.z.y ∧ n ≠ N ⇒ wp.(z,y:= E,F).(inv.(n+1).z.y)
+
+≡   Prove ⇒
+
+    •   wp.(z,y:= E,F).(inv.(n+1).z.y)
+
+    (3) n ∈ [0,N]
+    
+    (4) z = s.n
+    
+    (5) y = f.n
+
+    (6) n ≠ N
+
+    ≡   Assignment
+
+        inv.(n+1).E.F
+
+    ≡   Theory [3]
+
+        ✓  n+1 ∈ [0,N]
+
+        E = (3 * s.n) + (3 * f.n * 2) ∧
+        F = 3 * f.n
+
+    ≡   Assumptions (4,5)
+
+        E = (3 * z) + (3 * y * 2) ∧
+        F = 3 * y
+
+    ■
+
+⋯   true
+
+■

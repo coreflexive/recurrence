@@ -1,0 +1,35 @@
+•   inv.(n+1) = ( z,y : 0 ≤ n+1 ≤ N
+                      : z = (3 * s.n) + (3 * f.n * 2)
+                      ∧ y = 3 * f.n
+                )
+
+⊩   inv.(n+1)
+
+=   Definition of inv
+
+    ( n,z,y : 0 ≤ n ≤ N : z = s.n ∧ y = f.n ).(n+1)
+
+=   λ comp
+
+    ( z,y : 0 ≤ n+1 ≤ N : z = s.(n+1) ∧ y = f.(n+1) )
+
+=   Focus on term
+
+    •   z = s.(n+1) ∧ y = f.(n+1)
+
+    ≡   Definition of f
+
+        z = s.(n+1) ∧ y = 3 * f.n
+
+    ≡   Theory [1]
+
+        z = (3 * s.n) + (3 * f.n * 2) ∧ y = 3 * f.n
+
+    ■
+
+⋯   ( z,y : 0 ≤ n+1 ≤ N
+          : z = (3 * s.n) + (3 * f.n * 2)
+          ∧ y = 3 * f.n
+    )
+
+■

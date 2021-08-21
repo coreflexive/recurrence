@@ -1,0 +1,27 @@
+•   inv.0 = ( z,y :: z = 4 ∧ y = 0 )
+
+-   0 ≤ N
+
+⊩   inv.0
+
+=   Definition of inv
+
+    ( n,z,y : 0 ≤ n ≤ N : z = s.n ∧ y = f.n ).0
+
+=   λ comp
+
+    ( z,y : 0 ≤ 0 ≤ N : z = s.0 ∧ y = f.0 )
+
+=   ≤ reflexive
+
+    ( z,y : 0 ≤ N : z = s.0 ∧ y = f.0 )
+
+=   Assumption
+
+    ( z,y :: z = s.0 ∧ y = f.0 )
+
+=   Theory [0]; Definition f
+
+    ( z,y :: z = 4 ∧ y = 0 )
+
+■

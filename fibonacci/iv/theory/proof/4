@@ -1,0 +1,51 @@
+•   s.(n+1) = X * s.n + Y * s.(n-1) + f.n
+
+⊩   s.(n+1)
+
+=   Theory [2]
+
+    (Σ( i : 0 ≤ i ≤ n-2 : f.i * f.(n-i) ) + f.(n-1))[n:= n+1]
+
+=   Textual substitution
+
+    Σ( i : 0 ≤ i ≤ (n+1)-2 : f.i * f.((n+1)-i) ) + f.((n+1)-1)
+
+=   Arithmetic
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.((n+1)-i) ) + f.n
+
+=   Focus on summation
+
+    •   Σ( i : 0 ≤ i ≤ n-1 : f.i * f.((n+1)-i) )
+
+    =   Theory [3]
+
+        Σ( i : 0 ≤ i ≤ n-1 : (X * f.i * f.(n-i)) + (Y * f.i * f.(n-1-i)) )
+
+    =   Distributivity
+
+        Σ( i : 0 ≤ i ≤ n-1 : X * f.i * f.(n-i) ) + 
+        Σ( i : 0 ≤ i ≤ n-1 : Y * f.i * f.(n-1-i) )
+
+    =   Distributivity
+
+        X * Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) ) + 
+        Y * Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-1-i) )
+
+    =   Theory [1]
+
+        X * s.n + 
+        Y * Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-1-i) )
+
+    =   Definition of s
+
+        X * s.n +
+        Y * s.(n-1)
+
+    ■
+
+⋯   X * s.n +
+    Y * s.(n-1) +
+    f.n
+
+■

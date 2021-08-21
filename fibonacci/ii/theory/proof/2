@@ -1,0 +1,33 @@
+•   inv.(n+1).z.y.x ≡ z = s.n + f.(n+1) ∧
+                      y = f.(n+1) + f.n ∧
+                      x = f.(n+1)
+
+⊩   inv.(n+1).z.y.x
+
+≡   Definition of inv
+
+    ( n, z, y, x : n ≥ 0 : z = s.n ∧ y = f.(n+1) ∧ x = f.n ).(n+1).z.y.x
+
+≡   λ comp
+
+    •   n+1 ≥ 0
+
+    z = s.(n+1) ∧ y = f.((n+1)+1) ∧ x = f.(n+1)
+
+≡   Arithmetic
+
+    z = s.(n+1) ∧ y = f.(n+2) ∧ x = f.(n+1)
+
+≡   Theory [3]
+
+    z = s.n + f.(n+1) ∧
+    y = f.(n+2) ∧
+    x = f.(n+1)
+
+≡   Definition of f
+
+    z = s.n + f.(n+1) ∧
+    y = f.(n+1) + f.n ∧
+    x = f.(n+1)
+
+■

@@ -1,0 +1,8 @@
+  var N : int { N ≥ 0 }
+; n,z,y,x,w : int
+; n,z,y,x,w:= 0,0,0,0,1
+; do n ≠ N →
+    z,y,x,w:= X*z + Y*y + x,z,w,X*w + Y*x
+  ; n:= n+1
+  od
+{ z = s.N }

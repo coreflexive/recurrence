@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+
+def fib(num=0)
+  n,y,x = 0,0,1
+  while n != num do
+    y,x = x,x+y
+    n = n+1
+  end
+  y
+end
+
+binding.pry

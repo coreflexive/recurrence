@@ -1,0 +1,8 @@
+  var N : int { N ≥ 0 }
+; n,z,y : int
+; n,z,y:= 0,4,2
+; do n ≠ N →
+    z,y:= (3 * z) + (3 * y * 6),3 * y
+  ; n:= n+1
+  od
+  { z : z = s.N }

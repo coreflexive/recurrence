@@ -1,0 +1,3 @@
+  var N : int { N ≥ 0 }
+; y : int
+; y : y = f.N

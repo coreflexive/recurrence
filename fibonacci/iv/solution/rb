@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+
+def fibolucci(num=0,a=1,b=1)
+  n,z,y,x,w = 0,0,0,0,1
+  while n != num do
+    z,y,x,w = a*z + b*y + x, z, w, a*w + b*x
+    n = n+1
+  end
+  z
+end
+
+binding.pry

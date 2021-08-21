@@ -1,0 +1,3 @@
+  var N : int { N ≥ 0 }
+; z : int
+; z : z = Σ( i : 0 ≤ i ≤ N : f.i )

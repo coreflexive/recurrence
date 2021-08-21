@@ -1,0 +1,70 @@
+•   { inv.(n,z,y,x,w) ∧ n ≠ N } z,y,x,w:= E,F,G,H { inv.(n+1,z,y,x,w) }
+
+(1) E = ? // E = z + y + x
+
+(2) F = ? // F = z
+
+(3) G = ? // G = w
+
+(4) H = ? // H = w + x
+
+≡   Hoare triple
+
+    inv.(n,z,y,x,w) ∧ n ≠ N ⇒ wp.(z,y,x,w:= E,F,G,H).(inv.(n+1,z,y,x,w))
+
+≡   Prove ⇒
+
+    •   wp.(z,y,x,w:= E,F,G,H).(inv.(n+1,z,y,x,w))
+
+    (5)   0 ≤ n ≤ N
+
+    (6)   z = s.n
+    
+    (7)   y = s.(n-1)
+    
+    (8)   x = f.n
+    
+    (9)   w = f.(n+1)
+
+    (10)  n ≠ N
+
+    ≡   Assignment
+
+        inv.(n+1,E,F,G,H)
+
+    ≡   λ comp
+
+        •   0 ≤ n+1 ≤ N
+
+        E = s.(n+1) ∧ F = s.((n+1)-1) ∧ G = f.(n+1) ∧ H = f.((n+1)+1)
+
+    ≡   Arithmetic
+
+        E = s.(n+1) ∧ F = s.n ∧ G = f.(n+1) ∧ H = f.(n+2)
+
+    ≡   Definition of f
+
+        E = s.(n+1) ∧
+        F = s.n ∧
+        G = f.(n+1) ∧
+        H = f.(n+1) + f.n
+
+    ≡   Theory [3]
+
+        E = s.n + s.(n-1) + f.n ∧
+        F = s.n ∧
+        G = f.(n+1) ∧
+        H = f.(n+1) + f.n
+
+    ≡   Assumptions
+
+        E = z + y + x ∧
+        F = z ∧
+        G = w ∧
+        H = w + x
+
+    ■
+
+⋯   true
+
+■

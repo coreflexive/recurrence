@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+
+def f(num=0)
+  n,z = 0,2
+  while n != num do
+    z = 3 * z
+    n = n+1
+  end
+  z
+end
+
+def s(num=0)
+  n,z,y = 0,4,2
+  while n != num do
+    y = 3 * y
+    z = (3 * z) + (y * 2)
+    n = n+1
+  end
+  z
+end
+
+binding.pry

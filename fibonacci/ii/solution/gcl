@@ -1,0 +1,8 @@
+  var N : int { N ≥ 0 }
+; n,z,y,x : int
+; n,z,y,x:= 0,0,1,0
+; do n ≠ N →
+    z,y,x:=z+y,y+x,y
+    n:= n+1
+  od
+  { z = Σ( i : 0 ≤ i ≤ N : f.i ) }

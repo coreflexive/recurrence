@@ -1,0 +1,43 @@
+•   { N ≥ 0 } n,z,y,x,w:= 0,E,F,G,H { inv.(n,z,y,x,w) }
+
+(1) E = ? // E = 0
+
+(2) F = ? // F = 0
+
+(3) G = ? // G = 0
+
+(4) H = ? // H = 1
+
+≡   Hoare triple
+
+    N ≥ 0 ⇒ wp.(n,z,y,x,w:= 0,E,F,G,H).(inv.(n,z,y,x,w))
+
+≡   Prove ⇒
+
+    •   wp.(n,z,y,x,w:= 0,E,F,G,H).(inv.(n,z,y,x,w))
+
+    (5) N ≥ 0
+
+    ≡   Assignment
+
+        inv.(0,E,F,G,H)
+
+    ≡   Definition of inv; λ comp
+
+        •   0 ≤ 0 ≤ N
+        
+        E = s.0 ∧ F = s.(0-1) ∧ G = f.0 ∧ H = f.(0+1)
+
+    ≡   Arithmetic
+
+        E = s.0 ∧ F = s.(-1) ∧ G = f.0 ∧ H = f.1
+
+    ≡   Theory [0,5]; Definition of f
+
+        E = 0 ∧ F = 0 ∧ G = 0 ∧ H = 1
+
+    ■
+
+⋯   true
+
+■

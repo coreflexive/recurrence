@@ -1,0 +1,33 @@
+•   { true } n,y,x:= 0,F,G { inv.n.y.x }
+
+(1) F = ? // F = 0
+
+(2) G = ? // G = 1
+
+≡   Hoare triple
+
+    true ⇒ wp.(n,y,x:= 0,F,G).(inv.n.y.x)
+
+≡   Left identity of ⇒
+
+    wp.(n,y,x:= 0,F,G).(inv.n.y.x)
+
+≡   Assignment
+
+    (inv.n.y.x)[n,y,x:= 0,F,G]
+
+≡   Definition of inv; λ comp
+
+    •   0,F,G ≥ 0 // 0,0,1 ≥ 0
+    
+    F = f.0 ∧ G = f.(0+1)
+
+≡   Arithmetic
+
+    F = f.0 ∧ G = f.1
+
+≡   Definition of f, twice
+
+    F = 0 ∧ G = 1   -- Assumptions (1,2)
+
+■

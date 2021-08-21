@@ -1,0 +1,17 @@
+•   f.i * f.((n+1)-i) = (X * f.i * f.(n-i)) + (Y * f.i * f.(n-1-i))
+
+⊩   f.i * f.((n+1)-i)
+
+=   Definition of f
+
+    f.i * (X * f.(n-i) + Y * f.(n-1-i))
+
+=   Distributivity
+
+    (f.i * X * f.(n-i)) + (f.i * Y * f.(n-1-i))
+
+=   * symmetric
+
+    (X * f.i * f.(n-i)) + (Y * f.i * f.(n-1-i))
+
+■

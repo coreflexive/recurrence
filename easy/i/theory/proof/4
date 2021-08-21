@@ -1,0 +1,25 @@
+•   n,z,y:= 0,4,2 { inv.n.z.y }
+
+≡   Hoare triple
+
+    wp.(n,z,y:= 0,4,2).(inv.n.z.y)
+
+≡   Assignment
+
+    (inv.n.z.y)[n,z,y:= 0,4,2]
+
+≡   Textual substituition
+
+    inv.0.4.2
+
+≡   Definition of inv
+
+    ( n,z,y : n ∈ [0,N] : z = s.n ∧ y = f.n ).0.4.2
+
+≡   λ comp
+
+    ✓   0 ∈ [0,N]
+
+    4 = s.0 ∧ 2 = f.0
+
+■

@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+
+def fib(num=0)
+  n,y,x = 0,0,1
+  while n != num do
+    y,x = x,x+y
+    n = n+1
+  end
+  y
+end
+
+def oracle(num=0)
+  (0..num).map { |i| fib(i) * fib(num-i) }.sum
+end
+
+def f(num=0)
+  n,z,y,x = 0,0,0,1
+  while n != num do
+    z,y,x = 2*z + y,x,x+y
+    n = n+1
+  end
+  z
+end
+
+binding.pry

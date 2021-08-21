@@ -1,0 +1,49 @@
+•   { inv.n.y.x ∧ n ≠ N } y,x:= E,F { inv.(n+1).y.x }
+
+(1) E = ? // E = x
+
+(2) F = ? // F = x+y
+
+≡   Hoare triple
+
+    inv.n.y.x ∧ n ≠ N ⇒ wp.(y,x:= E,F).(inv.(n+1).y.x)
+
+≡   Prove ⇒
+
+    •   wp.(y,x:= E,F).(inv.(n+1).y.x)
+
+    (3) n,y,x ≥ 0
+    
+    (4) y = f.n
+    
+    (5) x = f.(n+1)
+
+    (6) n ≠ N
+
+    ≡   Assignment
+        
+        inv.(n+1).E.F
+
+    ≡   λ comp
+
+        •   n+1,E,F ≥ 0 // n+1,x,x+y ≥ 0
+
+        E = f.(n+1) ∧ F = f.(n+2)
+
+    ≡   Theory [0]
+
+        E = f.(n+1) ∧ F = f.(n+2-1) + f.(n+2-2) ∧ 2 ≤ n+2
+
+    ≡   Arithmetic
+
+        E = f.(n+1) ∧ F = f.(n+1) + f.n ∧ 0 ≤ n
+
+    ≡   Assumptions (3,4,5)
+
+        E = x ∧ F = x + y
+
+    ■
+
+⋯   true
+
+■

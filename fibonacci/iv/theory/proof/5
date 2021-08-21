@@ -1,0 +1,21 @@
+•   s.(-1) = 0
+
+⊩   s.(-1)
+
+=   Definition of s
+
+    ( n :: Σ( i : 0 ≤ i ≤ n : f.i * f.(n-i) ) ).(-1)
+
+=   λ comp
+
+    Σ( i : 0 ≤ i ≤ -1 : f.i * f.(-1-i) )
+
+=   Contradiction
+
+    Σ( i : false : f.i * f.(-1-i) )
+
+=   Empty range
+
+    0
+
+■

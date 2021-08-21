@@ -1,0 +1,29 @@
+•   s.n = Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) )
+
+⊩   s.n
+
+=   Definition of s
+
+    ( n :: Σ( i : 0 ≤ i ≤ n : f.i * f.(n-i) ) ).n
+
+=   λ comp
+
+    Σ( i : 0 ≤ i ≤ n : f.i * f.(n-i) )
+
+=   Split-off term
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) ) + f.n * f.(n-n)
+
+=   Arithmetic
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) ) + f.n * f.0
+
+=   Definition of f
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) ) + f.n * 0
+
+=   Zero of *; Unit of +
+
+    Σ( i : 0 ≤ i ≤ n-1 : f.i * f.(n-i) )
+
+■

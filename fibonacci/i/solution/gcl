@@ -1,0 +1,8 @@
+  var N : int { N ≥ 0 }
+; n,y,x : int
+; n,y,x:= 0,0,1
+; do n ≠ N →
+  ; y,x:= x,x+y
+  ; n:= n+1
+  od
+  { y = f.N }

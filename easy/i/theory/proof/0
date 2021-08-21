@@ -1,0 +1,35 @@
+•   s.0 = 4
+
+⊩   s.0
+
+=   Definition of s
+
+    ( n : n ≥ 0 : Σ( i : 0 ≤ i ≤ n : f.i * f.(n-i) ) ).0
+
+=   λ comp
+
+    ✓  0 ≥ 0
+
+    Σ( i : 0 ≤ i ≤ 0 : f.i * f.(0-i) )
+
+=   Inequalities
+
+    Σ( i : 0 = i : f.i * f.(0-i) )
+
+=   One-point
+
+    f.0 * f.(0-0)
+
+=   Arithmetic
+
+    f.0 * f.0
+
+=   Definition of f
+
+    2 * 2
+
+=   Arithmetic
+
+    4
+
+■

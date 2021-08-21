@@ -1,0 +1,49 @@
+•   { inv.n.z.y.x ∧ n ≠ N } z,y,x:= E,F,G { inv.(n+1).z.y.x }
+
+(1) E = ? // E = z + y
+
+(2) F = ? // F = y + x
+
+(3) G = ? // G = y
+
+≡   Hoare triple
+
+    inv.n.z.y.x ∧ n ≠ N ⇒ wp.(z,y,x:= E,F,G).(inv.(n+1).z.y.x)
+
+≡   Prove ⇒
+
+    •   wp.(z,y,x:= E,F,G).(inv.(n+1).z.y.x)
+
+    (4) n ≥ 0
+    
+    (5) z = s.n
+    
+    (6) y = f.(n+1)
+    
+    (7) x = f.n
+
+    (8) n ≠ N
+
+    ≡   Assignment
+
+        (inv.(n+1).z.y.x)[z,y,x:= E,F,G]
+
+    ≡   Theory [2]
+
+        ✓   n+1 ≥ 0
+
+        E = s.n + f.(n+1) ∧
+        F = f.(n+1) + f.n ∧
+        G = f.(n+1)
+
+    ≡   Assumptions (5,6,7)
+
+        E = z + y ∧
+        F = y + x ∧
+        G = y
+
+    ■
+
+⋯   true
+
+■
